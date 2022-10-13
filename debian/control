@@ -1,0 +1,27 @@
+Source: node-ecc-jsbn
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , node-jsbn <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-ecc-jsbn
+Vcs-Git: https://salsa.debian.org/js-team/node-ecc-jsbn.git
+Homepage: https://github.com/quartzjer/ecc-jsbn
+Rules-Requires-Root: no
+
+Package: node-ecc-jsbn
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-jsbn
+Description: ECC JS code based on JSBN
+ Elliptic Curve Cryptography package based on jsbn from Tom Wu.
+ This is a subset of the same interface as the node compiled module ecc,
+ but works in the browser too. It also uses point compression now.
+ .
+ Node.js is an event-based server-side JavaScript engine.
